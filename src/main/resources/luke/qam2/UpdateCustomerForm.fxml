@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="1056.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="luke.qam2.controllers.UpdateCustomerFormController">
+   <children>
+      <Text layoutX="45.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Customer">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <VBox layoutX="181.0" layoutY="99.0" prefHeight="512.0" prefWidth="694.0" spacing="50.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="61.0" prefWidth="694.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="181.0" text="Customer ID" />
+                  <TextField fx:id="customerIdTextField" disable="true" prefHeight="25.0" prefWidth="263.0" promptText="An ID will be generated upon creation" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="61.0" prefWidth="694.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="181.0" text="Customer Name" />
+                  <TextField fx:id="customerNameTextField" prefHeight="25.0" prefWidth="263.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="71.0" prefHeight="61.0" prefWidth="694.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="181.0" text="Customer Address" />
+                  <TextField fx:id="customerAddressTextField" prefHeight="25.0" prefWidth="263.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="132.0" prefHeight="61.0" prefWidth="694.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="181.0" text="Customer Postal Code" />
+                  <TextField fx:id="customerPostalCodeTextField" prefHeight="25.0" prefWidth="263.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="193.0" prefHeight="61.0" prefWidth="694.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="181.0" text="Customer Phone" />
+                  <TextField fx:id="customerPhoneTextField" prefHeight="25.0" prefWidth="263.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="254.0" prefHeight="61.0" prefWidth="694.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="183.0" text="Customer Country" />
+                  <ComboBox fx:id="customerCountryComboBox" onAction="#populateFirstLevelDivisions" prefWidth="150.0" />
+                  <Label layoutX="10.0" layoutY="32.0" prefHeight="17.0" prefWidth="228.0" text="State/Province">
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </Label>
+                  <ComboBox fx:id="customerDivisionComboBox" layoutX="191.0" layoutY="28.0" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <ButtonBar prefHeight="51.0" prefWidth="694.0">
+              <buttons>
+                <Button mnemonicParsing="false" onAction="#saveCustomer" text="Save" />
+                  <Button layoutX="629.0" layoutY="18.0" mnemonicParsing="false" onAction="#returnToMainForm" text="Back" />
+              </buttons>
+            </ButtonBar>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
